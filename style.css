@@ -1,0 +1,123 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+header {
+	text-align: center;
+	padding: 10px;
+}
+main {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+}
+.rb {
+	border-right: 1px solid black;
+}
+.hide {
+	display: none;
+}
+
+
+#player-selections {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 25px;
+	row-gap: 15px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+#player-selections.hide {
+	display: none;
+}
+#players-selected.hide {
+	display: none;
+}
+.selected {
+	max-width: 80px;
+	max-height: 100px;
+}
+#players-selected {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 25px;
+	row-gap: 15px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+#player-selections > article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+#player-selections > button {
+	align-self: center;
+	justify-self: center;
+	grid-column: span 2;
+	font-size: 20px;
+	padding: 5px 30px;
+}
+.selections {
+	display: flex;
+	gap: 10px;
+}
+.selections > img {
+	max-width: 75px;
+	max-height: 100px;
+	object-fit: cover;
+}
+.selections > img.active {
+	border-bottom: 1px solid black;
+}
+.selections > img:hover {
+	border-bottom: 1px solid black;
+	cursor: pointer;
+}
+
+#game-board {
+	display: none;
+}
+#game-board.active {
+	display: grid;
+}
+#game-tiles {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	width: 600px;
+	height: 600px;
+	border-collapse: collapse;
+}
+#game-tiles div {
+	border-bottom: 1px solid black;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 60px;
+}
+#game-tiles div > img {
+	max-width: 80px;
+	max-height: 100px;
+}
+#game-board div:hover {
+	cursor: pointer;
+}
+#game-board div:nth-child(n+7) {
+	border-bottom: none;
+}
+
+#announcement {
+	padding-block: 10px;
+	text-align: center;
+	font-size: 30px;
+}
